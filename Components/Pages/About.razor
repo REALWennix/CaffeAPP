@@ -1,0 +1,92 @@
+﻿@page "/about"
+@rendermode InteractiveServer
+
+<PageTitle>O projektu</PageTitle>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4 fade-in">O tomto projektu</h1>
+
+    <div class="card mb-4 shadow-lg hover-shadow fade-in">
+        <div class="card-body">
+            <p class="card-text">Tento projekt je <strong>CoffeeApp</strong> navržený pro správu přípravy kávy a souvisejících úkolů.</p>
+        </div>
+    </div>
+
+    <h2 class="my-4 fade-in">Podrobnosti o projektu</h2>
+    <ul class="list-group mb-4">
+        <li class="list-group-item fade-in">
+            <i class="fab fa-github"></i>
+            <strong>GitHub repo:</strong>
+            <a href="https://github.com/REALWennix/CaffeAPP" target="_blank" class="link-primary">https://github.com/REALWennix/CaffeAPP</a>
+        </li>
+        <li class="list-group-item fade-in">
+            <strong>Použité technologie:</strong>
+            <ul class="list-unstyled mb-0">
+                <li><i class="fab fa-microsoft"></i> Blazor</li>
+                <li><i class="fas fa-code"></i> C#</li>
+                <li><i class="fab fa-dot-net"></i> ASP.NET Core</li>
+                <li><i class="fas fa-database"></i> Entity Framework Core</li>
+                <li><i class="fas fa-database"></i> SQL Server</li>
+                <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                <li><i class="fab fa-microsoft"></i> Azure</li>
+                <li><i class="fas fa-bell"></i> SignalR (pro notifikace v reálném čase)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 class="my-4 fade-in">Přispěvatelé</h2>
+    <p class="fade-in">Na vývoji tohoto projektu se podíleli následující lidé:</p>
+    <ul class="list-group mb-4">
+        <li class="list-group-item fade-in">
+            <i class="fas fa-user-tie"></i>
+            <strong>Martin Rosič</strong> - Vedoucí projektu, backend vývojář a odborník na Azure.
+        </li>
+        <li class="list-group-item fade-in">
+            <i class="fas fa-user-ninja"></i>
+            <strong>Gasková Ornella Kim</strong> - Frontend vývojářka a specialistka na databáze.
+        </li>
+        <li class="list-group-item fade-in">
+            <i class="fas fa-user-cog"></i>
+            <strong>Tomáš Coufal</strong> - Backend vývojář s důrazem na optimalizaci a efektivitu.
+        </li>
+    </ul>
+
+    <h2 class="my-4 fade-in">Funkce</h2>
+    <ul class="list-group mb-4">
+        <li class="list-group-item bounce fade-in"><i class="fas fa-qrcode"></i> Generování QR kódů pro pozvání uživatelů.</li>
+        <li class="list-group-item bounce fade-in"><i class="fas fa-coffee"></i> Monitorování přípravy kávy.</li>
+        <li class="list-group-item bounce fade-in"><i class="fas fa-bell"></i> Notifikace v reálném čase pro přidělování a aktualizace úkolů.</li>
+        <li class="list-group-item bounce fade-in"><i class="fas fa-tasks"></i> Správa úkolů souvisejících s kávou a údržbou kávovaru.</li>
+    </ul>
+
+    <h2 class="my-4 fade-in">Kontakt</h2>
+    <p class="fade-in">
+        Pokud máte nějaké dotazy nebo návrhy, neváhejte nás kontaktovat prostřednictvím GitHub problémů nebo e-mailem na
+        <a href="mailto:rosic@spsejecna.cz" class="link-primary"><i class="fas fa-envelope"></i> rosic@spsejecna.cz</a>.
+    </p>
+</div>
+
+<!-- Nezapomeňte na přidání Font Awesome do vašeho projektu -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Přidejte Bootstrap CSS pro styly -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Přidejte jQuery a Bootstrap JS pro animace -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+    }
+    
+</style>
+
+<script>
+    $(document).ready(function() {
+        $('.fade-in').each(function(i) {
+            $(this).delay(i * 200).fadeTo(500, 1);
+        });
+    });
+</script>
